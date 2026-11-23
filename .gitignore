@@ -1,0 +1,4 @@
+# Données nominatives et code d'accès : ne jamais publier.
+data/
+.env
+node_modules/

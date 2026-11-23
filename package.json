@@ -1,0 +1,8 @@
+{
+  "name": "enquete-si-mci",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Formulaire d'enquête SI et page des résultats",
+  "scripts": { "start": "node serveur.js" },
+  "engines": { "node": ">=18" }
+}

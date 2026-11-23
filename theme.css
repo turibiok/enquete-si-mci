@@ -1,0 +1,15 @@
+/* Charte graphique : remplacer ces valeurs par celles de la charte officielle du ministère.
+   Les valeurs ci-dessous sont des valeurs par défaut, pas la charte du ministère. */
+:root {
+  --c-primaire: #0b5d3b;        /* couleur principale (en-tête, boutons) */
+  --c-primaire-fonce: #084429;  /* survol des boutons */
+  --c-accent: #e9b500;          /* filet d'accent, barre de progression */
+  --c-texte: #1c2321;
+  --c-texte-doux: #5a6562;
+  --c-fond: #f4f6f5;
+  --c-carte: #ffffff;
+  --c-bord: #d5dbd8;
+  --c-erreur: #b3261e;
+  --police: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --rayon: 8px;
+}

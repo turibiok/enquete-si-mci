@@ -1,0 +1,59 @@
+* { box-sizing: border-box; }
+html { font-size: 16px; }
+body { margin: 0; font-family: var(--police); color: var(--c-texte); background: var(--c-fond); line-height: 1.5; }
+.entete { background: var(--c-primaire); color: #fff; border-bottom: 4px solid var(--c-accent); }
+.entete-int { max-width: 880px; margin: 0 auto; padding: 16px 20px; display: flex; align-items: center; gap: 16px; }
+.entete img { height: 56px; width: auto; background: #fff; border-radius: 4px; padding: 4px; }
+.entete .min { font-size: .85rem; letter-spacing: .04em; text-transform: uppercase; opacity: .9; }
+.entete h1 { margin: 2px 0 0; font-size: 1.25rem; font-weight: 600; }
+main { max-width: 880px; margin: 0 auto; padding: 20px; }
+.bandeau-test { background: #fff4d6; border: 1px solid var(--c-accent); border-radius: var(--rayon); padding: 10px 14px; margin-bottom: 16px; font-size: .9rem; }
+.progression { margin-bottom: 16px; }
+.progression .txt { font-size: .85rem; color: var(--c-texte-doux); margin-bottom: 6px; }
+.progression .barre { height: 6px; background: var(--c-bord); border-radius: 3px; overflow: hidden; }
+.progression .barre span { display: block; height: 100%; background: var(--c-accent); transition: width .2s; }
+.carte { background: var(--c-carte); border: 1px solid var(--c-bord); border-radius: var(--rayon); padding: 24px; }
+.carte h2 { margin: 0 0 16px; font-size: 1.3rem; color: var(--c-primaire); }
+.carte p { margin: 0 0 12px; }
+.question { border: 0; padding: 0; margin: 0 0 28px; min-width: 0; }
+.question[hidden] { display: none; }
+.question legend, .question .intitule { font-weight: 600; margin-bottom: 4px; padding: 0; }
+.question .num { color: var(--c-primaire); margin-right: 6px; }
+.question .aide { font-size: .85rem; color: var(--c-texte-doux); margin: 0 0 8px; }
+.options { display: grid; gap: 6px; }
+.options label { display: flex; align-items: flex-start; gap: 10px; padding: 9px 12px; border: 1px solid var(--c-bord); border-radius: 6px; cursor: pointer; background: #fff; }
+.options label:hover { border-color: var(--c-primaire); }
+.options input { margin-top: 4px; accent-color: var(--c-primaire); flex: none; }
+.options label:has(input:checked) { border-color: var(--c-primaire); background: #eef5f1; }
+.autre { margin-top: 6px; }
+input[type=text], textarea { width: 100%; font: inherit; padding: 9px 12px; border: 1px solid var(--c-bord); border-radius: 6px; background: #fff; color: inherit; }
+textarea { min-height: 90px; resize: vertical; }
+input:focus-visible, textarea:focus-visible, button:focus-visible { outline: 3px solid var(--c-accent); outline-offset: 1px; }
+.erreur { color: var(--c-erreur); font-size: .9rem; margin-top: 6px; font-weight: 600; }
+.question.invalide .options label, .question.invalide table { border-color: var(--c-erreur); }
+.matrice-cadre { overflow-x: auto; }
+table.matrice { width: 100%; border-collapse: collapse; border: 1px solid var(--c-bord); font-size: .9rem; background: #fff; }
+table.matrice th, table.matrice td { border-bottom: 1px solid var(--c-bord); padding: 8px 6px; text-align: center; vertical-align: middle; }
+table.matrice thead th { background: #eef2f0; font-weight: 600; font-size: .8rem; }
+table.matrice th[scope=row] { text-align: left; font-weight: 500; min-width: 180px; }
+table.matrice td label { display: flex; justify-content: center; align-items: center; gap: 8px; cursor: pointer; padding: 4px; }
+table.matrice td .lib { display: none; }
+table.matrice input { accent-color: var(--c-primaire); width: 18px; height: 18px; }
+.actions { display: flex; justify-content: space-between; gap: 12px; margin-top: 8px; flex-wrap: wrap; }
+button { font: inherit; font-weight: 600; padding: 11px 22px; border-radius: 6px; border: 1px solid var(--c-primaire); cursor: pointer; }
+button.principal { background: var(--c-primaire); color: #fff; }
+button.principal:hover { background: var(--c-primaire-fonce); }
+button.secondaire { background: #fff; color: var(--c-primaire); }
+button[disabled] { opacity: .6; cursor: default; }
+.pied { max-width: 880px; margin: 0 auto; padding: 8px 20px 32px; font-size: .8rem; color: var(--c-texte-doux); }
+@media (max-width: 720px) {
+  .carte { padding: 16px; }
+  table.matrice, table.matrice tbody, table.matrice tr, table.matrice th, table.matrice td { display: block; width: 100%; }
+  table.matrice thead { display: none; }
+  table.matrice { border: 0; background: transparent; }
+  table.matrice tr { border: 1px solid var(--c-bord); border-radius: 6px; margin-bottom: 10px; background: #fff; padding: 8px; }
+  table.matrice th[scope=row] { border: 0; font-weight: 600; padding: 4px 6px 8px; }
+  table.matrice td { border: 0; padding: 0; text-align: left; }
+  table.matrice td label { justify-content: flex-start; padding: 7px 6px; }
+  table.matrice td .lib { display: inline; }
+}
